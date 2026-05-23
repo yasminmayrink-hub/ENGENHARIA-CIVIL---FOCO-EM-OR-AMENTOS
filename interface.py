@@ -7,13 +7,13 @@ import os
 load_dotenv()
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-st.title("Chatbot de Engenharia Civil - Foco em Orçamentos")
-st.caption("Assistente especializado em orçamentos, SINAPI e composições de custo.")
+st.title("🏗️Chatbot de Engenharia Civil - Foco em Orçamentos")
+st.caption("Especializado em orçamentos, SINAPI e composições de custo.")
 
 if "banco" not in st.session_state:
     st.session_state.banco = construir_banco()
 
-with st.chat_message("assistant"):
+with st.chat_message("assistant", avatar="📈"):
     st.write("Olá! Sou um assistente de Inteligência Artificial especializado em Engenharia Civil. Estou preparado para auxiliar em orçamentos, composições de custo unitário, consultas ao SINAPI e TCPO, levantamento de quantitativos e análise de propostas técnicas. Como posso te ajudar hoje?")
 
 if "historico" not in st.session_state:
